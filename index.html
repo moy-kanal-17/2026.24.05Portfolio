@@ -3,8 +3,21 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Abdulkodir Faxriddinov — Dev Portfolio</title>
-<meta name="description" content="Backend & Fullstack Developer from Tashkent"/>
+
+<!-- Премиальное SEO -->
+<title>Abdulkodir Faxriddinov — Backend & Fullstack Developer Portfolio</title>
+<meta name="description" content="Professional Backend & Fullstack Developer from Tashkent, Uzbekistan. Specialized in Node.js, NestJS, scalable web applications, and Telegram bots."/>
+<meta name="keywords" content="Abdulkodir Faxriddinov, Node.js, NestJS, React, Fullstack Developer, Tashkent, программист Ташкент, Telegram боты, OurSchool, Kunigram"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://lol.ourschool.uz/"/>
+
+<!-- Open Graph / Превью для Telegram, LinkedIn, Соцсетей -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://lol.ourschool.uz/"/>
+<meta property="og:title" content="Abdulkodir Faxriddinov — Backend & Fullstack Developer"/>
+<meta property="og:description" content="Scalable web applications, production-ready NestJS backends, and advanced Telegram bot systems from Tashkent."/>
+<meta property="og:image" content="https://lol.ourschool.uz/17.png"/>
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,600;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
@@ -34,6 +47,721 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9990;
 #curl.h{width:56px;height:56px;border-color:var(--gold)}
 #loader{position:fixed;inset:0;background:var(--bg);z-index:9997;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;transition:opacity 1s}
 #loader.gone{opacity:0;pointer-events:none}
+.ld-logo{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:700;color:var(--white);letter-spacing:-.03em;opacity:0;animation:ldIn .8s .3s forwards}
+.ld-logo em{color:var(--gold);font-style:italic}
+.ld-bar{width:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:ldBar 1.4s .5s ease forwards}
+.ld-sub{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gray);opacity:0;animation:ldIn .6s .9s forwards}
+@keyframes ldIn{to{opacity:1}}
+@keyframes ldBar{to{width:260px}}
+#prog{position:fixed;top:0;left:0;height:2px;background:var(--gold);z-index:10001;width:0;box-shadow:0 0 10px var(--gold)}
+nav{position:fixed;top:0;left:0;right:0;z-index:199;height:72px;background:rgba(7,7,10,.85);backdrop-filter:blur(32px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 60px;transition:background .3s}
+nav.sc{background:rgba(7,7,10,.98)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:-.02em}
+.logo em{color:var(--gold);font-style:italic}
+.nlinks{display:flex;gap:36px;list-style:none;align-items:center}
+.nlinks a{text-decoration:none;color:var(--gray2);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;transition:color .2s;cursor:none;position:relative}
+.nlinks a::after{content:'';position:absolute;bottom:-4px;left:0;right:100%;height:1px;background:var(--gold);transition:right .3s}
+.nlinks a:hover,.nlinks a.active{color:var(--gold)}
+.nlinks a:hover::after,.nlinks a.active::after{right:0}
+.ncta{background:var(--gold)!important;color:var(--bg)!important;padding:10px 24px!important;font-weight:600!important;border-radius:1px;transition:all .3s!important}
+.ncta::after{display:none!important}
+.ncta:hover{background:var(--gold2)!important;box-shadow:0 6px 28px var(--gold-glow)!important;transform:translateY(-2px)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:none;padding:4px;background:none;border:none}
+.burger span{width:22px;height:1.5px;background:var(--white);transition:all .3s;display:block}
+.nav-status{display:flex;align-items:center;gap:8px;font-size:10px;color:var(--gray);letter-spacing:.1em;text-transform:uppercase}
+.nav-dot{width:7px;height:7px;background:#4ade80;border-radius:50%;animation:blink 2s infinite;box-shadow:0 0 8px rgba(74,222,128,.5)}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+.lang-switch{display:flex;gap:8px;border:1px solid var(--border2);padding:4px;background:rgba(255,255,255,0.02)}
+.lang-btn{background:none;border:none;color:var(--gray);font-family:'Outfit',sans-serif;font-size:10px;font-weight:600;padding:4px 8px;cursor:none;transition:all .2s;letter-spacing:0.05em}
+.lang-btn:hover{color:var(--white)}
+.lang-btn.active{background:var(--gold);color:var(--bg)}
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding-top:72px}
+#hcv{position:absolute;inset:0;width:100%;height:100%}
+.hero-wrap{position:relative;z-index:2;width:100%;max-width:1440px;margin:0 auto;padding:0 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.h-tag{display:flex;align-items:center;gap:12px;font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:36px;opacity:0;transform:translateY(18px);animation:hIn .7s 2.1s forwards}
+.h-tag::before{content:'';width:40px;height:1px;background:var(--gold)}
+.h-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,5.5vw,92px);font-weight:700;line-height:.95;letter-spacing:-.04em;color:var(--white);margin-bottom:28px;opacity:0;transform:translateY(28px);animation:hIn .8s 2.3s forwards}
+.h-title em{color:var(--gold);font-style:italic;display:block}
+.typed-wrap{font-size:16px;font-weight:400;color:var(--gray2);letter-spacing:.04em;margin-bottom:20px;opacity:0;transform:translateY(18px);animation:hIn .7s 2.4s forwards;min-height:28px}
+.typed-cursor{color:var(--gold);animation:blink 1s infinite}
+.h-desc{font-size:15px;font-weight:300;color:var(--gray2);line-height:1.85;max-width:420px;margin-bottom:48px;opacity:0;transform:translateY(18px);animation:hIn .7s 2.5s forwards}
+.h-btns{display:flex;gap:14px;flex-wrap:wrap;opacity:0;transform:translateY(18px);animation:hIn .7s 2.7s forwards}
+.h-stats{display:flex;gap:48px;margin-top:56px;padding-top:40px;border-top:1px solid var(--border);opacity:0;transform:translateY(18px);animation:hIn .7s 2.9s forwards}
+.s-n{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:700;color:var(--gold);line-height:1}
+.s-l{font-size:10px;color:var(--gray);letter-spacing:.1em;text-transform:uppercase;margin-top:6px}
+@keyframes hIn{to{opacity:1;transform:none}}
+.btn-g{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--bg);padding:16px 36px;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border-radius:1px;cursor:none;border:none;position:relative;overflow:hidden;transition:all .3s;font-family:'Outfit',sans-serif}
+.btn-g::before{content:'';position:absolute;inset:0;background:var(--gold2);transform:translateX(-100%);transition:transform .4s}
+.btn-g:hover::before{transform:none}
+.btn-g span{position:relative;z-index:1}
+.btn-g:hover{box-shadow:0 14px 44px var(--gold-glow);transform:translateY(-3px)}
+.btn-o{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--white);padding:16px 36px;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border:1px solid var(--border2);border-radius:1px;cursor:none;transition:all .3s;font-family:'Outfit',sans-serif}
+.btn-o:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
+.hero-r{position:relative;opacity:0;animation:hIn .9s 2.5s forwards}
+.h-img-f{position:absolute;inset:-20px;border:1px solid var(--border);pointer-events:none;z-index:0}
+.h-img-f::before,.h-img-f::after{content:'';position:absolute;width:40px;height:40px;border-color:var(--gold);border-style:solid;opacity:.5}
+.h-img-f::before{top:-1px;left:-1px;border-width:1px 0 0 1px}
+.h-img-f::after{bottom:-1px;right:-1px;border-width:0 1px 1px 0}
+.h-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;position:relative;z-index:1;filter:brightness(.92) contrast(1.05)}
+.h-img-ph{width:100%;aspect-ratio:3/4;position:relative;z-index:1;background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;border:1px solid var(--border)}
+.ph-ico{font-size:44px;opacity:.25}
+.ph-txt{font-size:11px;color:var(--gray);letter-spacing:.18em;text-transform:uppercase;text-align:center;line-height:1.7}
+.h-card{position:absolute;bottom:48px;left:-56px;background:rgba(14,14,18,.96);border:1px solid var(--border);backdrop-filter:blur(24px);padding:22px 28px;z-index:3;animation:fltCard 6s ease-in-out infinite}
+@keyframes fltCard{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-12px) rotate(0)}}
+.hc-ico{font-size:22px;margin-bottom:6px}
+.hc-n{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1}
+.hc-l{font-size:11px;color:var(--gray2);margin-top:4px}
+.h-badge{position:absolute;top:32px;right:-36px;width:84px;height:84px;background:var(--gold);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:3;animation:spin 18s linear infinite;cursor:none}
+.h-badge-t{font-size:7.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--bg);line-height:1.5;text-align:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+.mq{background:var(--gold);overflow:hidden;padding:14px 0}
+.mq-t{display:flex;gap:60px;animation:mqs 26s linear infinite;width:max-content}
+.mq-i{display:flex;align-items:center;gap:14px;font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--bg);white-space:nowrap}
+.mq-d{width:5px;height:5px;background:var(--bg);border-radius:50%;opacity:.35}
+@keyframes mqs{to{transform:translateX(-50%)}}
+.sec-tag{display:flex;align-items:center;gap:12px;font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.sec-tag::before{content:'';width:32px;height:1px;background:var(--gold)}
+.sec-h{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,64px);font-weight:700;color:var(--white);line-height:1.05;letter-spacing:-.03em;margin-bottom:56px}
+.sec-h em{color:var(--gold);font-style:italic}
+.fade{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}
+.fade.vis{opacity:1;transform:none}
+#about{padding:120px 80px;background:var(--surface);position:relative;overflow:hidden}
+#about .bg-word{position:absolute;font-family:'Cormorant Garamond',serif;font-size:260px;font-weight:700;color:rgba(255,255,255,.016);right:-20px;top:50%;transform:translateY(-50%);pointer-events:none;user-select:none;white-space:nowrap}
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.ab-vis{position:relative}
+.ab-mi{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;position:relative;z-index:1;filter:brightness(.9)}
+.ab-ph{width:100%;aspect-ratio:3/4;position:relative;z-index:1;background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border:1px solid var(--border)}
+.ab-yr{position:absolute;top:28px;left:-16px;z-index:3}
+.ab-yn{font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:700;color:var(--gold);line-height:1;opacity:.7}
+.ab-yl{font-size:10px;color:var(--gray);letter-spacing:.18em;text-transform:uppercase;margin-top:4px}
+.ab-frame{position:absolute;inset:-12px;border:1px solid var(--border);pointer-events:none;z-index:0}
+.ab-frame::before,.ab-frame::after{content:'';position:absolute;width:32px;height:32px;border-color:var(--gold);border-style:solid;opacity:.45}
+.ab-frame::before{top:-1px;left:-1px;border-width:1px 0 0 1px}
+.ab-frame::after{bottom:-1px;right:-1px;border-width:0 1px 1px 0}
+.ab-desc{font-size:15px;color:var(--gray2);line-height:1.9;margin-bottom:36px;font-weight:300}
+.info-list{display:flex;flex-direction:column;margin-bottom:36px}
+.info-row{display:flex;gap:20px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--border);transition:padding-left .25s}
+.info-row:hover{padding-left:6px}
+.info-row:first-child{border-top:1px solid var(--border)}
+.info-key{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);width:100px;flex-shrink:0;padding-top:2px}
+.info-val{font-size:14px;color:var(--white);line-height:1.6}
+.lang-badge{display:inline-flex;align-items:center;gap:6px;margin-right:12px;font-size:13px;color:var(--gray2)}
+.lang-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.status-live{display:flex;align-items:center;gap:8px;font-size:14px;color:#4ade80}
+#skills{padding:120px 80px;background:var(--bg);position:relative;overflow:hidden}
+#skills .bg-word{position:absolute;font-family:'Cormorant Garamond',serif;font-size:260px;font-weight:700;color:rgba(255,255,255,.016);left:-20px;top:50%;transform:translateY(-50%);pointer-events:none;user-select:none}
+.skills-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:var(--border);border:1px solid var(--border)}
+.sk-card{background:var(--bg);padding:44px 32px;position:relative;overflow:hidden;transition:background .35s;cursor:none}
+.sk-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .4s;transform-origin:left}
+.sk-card:hover{background:rgba(201,169,110,.035)}
+.sk-card:hover::after{transform:scaleX(1)}
+.sk-num{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:300;color:rgba(201,169,110,.08);line-height:1;margin-bottom:20px;transition:color .4s}
+.sk-card:hover .sk-num{color:rgba(201,169,110,.18)}
+.sk-icon{font-size:24px;margin-bottom:14px}
+.sk-title{font-size:14px;font-weight:600;color:var(--white);margin-bottom:12px;letter-spacing:.04em}
+.sk-items{display:flex;flex-direction:column;gap:9px}
+.sk-item{font-size:12px;color:var(--gray);display:flex;align-items:center;gap:8px;line-height:1.5}
+.sk-item::before{content:'';width:33px;height:3px;background:var(--gold);border-radius:50%;flex-shrink:0;opacity:.6}
+.sk-bar-wrap{flex:1;height:2px;background:rgba(255,255,255,.06);border-radius:99px;overflow:hidden;max-width:80px}
+.sk-bar{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:99px;width:0;transition:width .9s ease}
+#projects{padding:120px 80px;background:var(--surface)}
+.proj-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1px;background:var(--border);border:1px solid var(--border)}
+.proj-c{background:var(--surface);padding:44px 36px;position:relative;overflow:hidden;transition:background .35s;cursor:none}
+.proj-c::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .5s;transform-origin:left}
+.proj-c:hover{background:rgba(201,169,110,.03)}
+.proj-c:hover::before{transform:scaleX(1)}
+.proj-num{font-size:9px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:20px;opacity:.6}
+.proj-icon{font-size:28px;margin-bottom:16px}
+.proj-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--white);margin-bottom:10px;letter-spacing:-.01em}
+.proj-desc{font-size:13px;color:var(--gray);line-height:1.8;margin-bottom:20px}
+.proj-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
+.proj-tag{font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,.25);padding:4px 10px;border-radius:1px}
+.proj-more{background:none;border:none;color:var(--gold);font-family:'Outfit',sans-serif;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:none;display:flex;align-items:center;gap:8px;transition:gap .2s;padding:0}
+.proj-more:hover{gap:14px}
+.proj-details{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.4,0,.2,1)}
+.proj-c.open .proj-details{max-height:240px}
+.proj-dl{margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:7px}
+.proj-dl li{font-size:12px;color:var(--gray);display:flex;align-items:flex-start;gap:10px;line-height:1.6}
+.proj-dl li::before{content:'→';color:var(--gold);flex-shrink:0;font-size:11px;margin-top:1px}
+#contact{padding:120px 80px;background:var(--bg);position:relative;overflow:hidden}
+#contact .bg-word{position:absolute;font-family:'Cormorant Garamond',serif;font-size:220px;font-weight:700;color:rgba(255,255,255,.015);bottom:-40px;right:-20px;pointer-events:none;user-select:none}
+.con-g{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:64px}
+.ci{padding:26px 0;border-bottom:1px solid var(--border);display:flex;gap:18px;align-items:flex-start;transition:padding-left .3s}
+.ci:hover{padding-left:8px}
+.c-ico{width:44px;height:44px;background:var(--gold-dim);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;transition:all .3s}
+.ci:hover .c-ico{background:rgba(201,169,110,.15);border-color:var(--gold)}
+.c-lbl{font-size:9px;color:var(--gray);letter-spacing:.2em;text-transform:uppercase;margin-bottom:5px}
+.c-val{font-size:15px;color:var(--white);text-decoration:none;transition:color .2s}
+a.c-val:hover{color:var(--gold)}
+.fi{margin-bottom:20px}
+.fl{display:block;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);margin-bottom:8px}
+.finp,.fsel,.fta{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--border2);color:var(--white);padding:15px 18px;font-family:'Outfit',sans-serif;font-size:14px;transition:border-color .25s,background .25s;outline:none}
+.finp:focus,.fsel:focus,.fta:focus{border-color:var(--gold);background:rgba(201,169,110,.04)}
+.finp::placeholder,.fta::placeholder{color:var(--gray)}
+.fsel{cursor:none}
+.fsel option{background:var(--card)}
+.fta{resize:vertical;min-height:120px}
+.fsub{width:100%;background:var(--gold);color:var(--bg);padding:18px 40px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;border:none;cursor:none;transition:all .3s;margin-top:8px;position:relative;overflow:hidden}
+.fsub::before{content:'';position:absolute;inset:0;background:var(--gold2);transform:translateX(-100%);transition:transform .4s}
+.fsub:hover::before{transform:none}
+.fsub span{position:relative;z-index:1}
+.fsub:hover{box-shadow:0 10px 36px var(--gold-glow);transform:translateY(-2px)}
+#form-ok{display:none;margin-top:14px;text-align:center;font-size:12px;color:var(--gold);letter-spacing:.1em}
+footer{background:var(--bg);border-top:1px solid var(--border);padding:36px 80px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+.fl-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--white)}
+.fl-logo em{color:var(--gold);font-style:italic}
+.fl-copy{font-size:12px;color:var(--gray)}
+.fl-soc{display:flex;gap:10px}
+.soc-a{width:40px;height:40px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray2);text-decoration:none;font-size:14px;transition:all .3s;cursor:none}
+.soc-a:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-dim)}
+@media(max-width:1100px){
+  .hero-wrap{grid-template-columns:1fr;padding:0 40px}
+  .hero-r{display:none}
+  .about-g{grid-template-columns:1fr}
+  .con-g{grid-template-columns:1fr;gap:48px}
+}
+@media(max-width:768px){
+  nav{padding:0 24px}
+  .nlinks{display:none}
+  .nlinks.op{display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(7,7,10,.98);padding:28px 24px;gap:22px;border-bottom:1px solid var(--border);z-index:198;align-items:flex-start}
+  .burger{display:flex}
+  #about,#skills,#projects,#contact{padding-left:24px;padding-right:24px}
+  footer{padding:28px 24px}
+  .skills-g{grid-template-columns:1fr}
+  .proj-g{grid-template-columns:1fr}
+  .h-stats{gap:28px;flex-wrap:wrap}
+  .hero-wrap{padding:0 24px}
+  .nav-status{display:none}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div id="cur"></div>
+<div id="curl"></div>
+
+<div id="loader">
+  <div class="ld-logo">Abdulkodir <em>Faxriddinov</em></div>
+  <div class="ld-bar"></div>
+  <div class="ld-sub">Backend · Fullstack · Tashkent</div>
+</div>
+
+<nav id="nav">
+  <a href="#" class="logo"><em>AF.</em></a>
+  <ul class="nlinks" id="nl">
+    <li><a href="#about" id="lnk-about" onclick="closeMobile()">About</a></li>
+    <li><a href="#skills" id="lnk-skills" onclick="closeMobile()">Skills</a></li>
+    <li><a href="#projects" id="lnk-projects" onclick="closeMobile()">Projects</a></li>
+    <li><a href="#contact" id="lnk-contact" class="ncta" onclick="closeMobile()">Contact</a></li>
+    <li>
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('ru')">RU</button>
+        <button class="lang-btn" onclick="setLang('uz')">UZ</button>
+      </div>
+    </li>
+  </ul>
+  <div class="nav-status">
+    <div class="nav-dot"></div>
+    <span id="nav-status-txt">Available for projects</span>
+  </div>
+  <button class="burger" onclick="toggleM()"><span></span><span></span><span></span></button>
+</nav>
+
+<section id="hero">
+  <canvas id="hcv"></canvas>
+  <div class="hero-wrap">
+    <div>
+      <div class="h-tag">Backend &amp; Fullstack Developer</div>
+      <h1 class="h-title">Abdulkodir<br><em>Faxriddinov</em></h1>
+      <div class="typed-wrap"><span id="typed-text"></span><span class="typed-cursor">|</span></div>
+      <p class="h-desc" id="hero-desc">Backend and fullstack developer based in Tashkent. Specializing in scalable web applications, Telegram bots, and AI integrations using Node.js and NestJS.</p>
+      <div class="h-btns">
+        <a href="#projects" class="btn-g"><span id="btn-view-proj">View projects</span> <span>→</span></a>
+        <a href="#contact" class="btn-o"><span id="btn-contact">Contact</span></a>
+      </div>
+      <div class="h-stats">
+        <div><div class="s-n" data-cnt="4">0</div><div class="s-l" id="stat-projects">Major projects</div></div>
+        <div><div class="s-n" data-cnt="5">0</div><div class="s-l" id="stat-stacks">Languages / stacks</div></div>
+        <div><div class="s-n">15</div><div class="s-l" id="stat-age">Years Old · Tashkent</div></div>
+      </div>
+    </div>
+    <div class="hero-r">
+      <div class="h-img-f"></div>
+      <div class="h-img-ph" id="photo-slot">
+        <div class="ph-ico">👤</div>
+         <img class="h-img" src="17.png" alt="Abdulkodir Faxriddinov — Backend & Fullstack Programmer Portfolio Pic"/>
+      </div>
+      <div class="h-card">
+        <div class="hc-ico">⚡</div>
+        <div class="hc-n">Node.js</div>
+        <div class="hc-l">NestJS · React · AI</div>
+      </div>
+      <div class="h-badge"><div class="h-badge-t">✦ FULL<br>STACK ✦</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="mq"><div class="mq-t" id="mqt"></div></div>
+
+<section id="about">
+  <div class="bg-word">ABOUT</div>
+  <div class="about-g">
+    <div class="ab-vis fade">
+      <div class="ab-yr"><div class="ab-yn">2011</div><div class="ab-yl" id="about-birth-yr">Birth year</div></div>
+      <div class="ab-frame"></div>
+      <div class="ab-ph">
+        <div class="ph-txt"> <img class="h-img" src="17.png" alt="Abdulkodir Faxriddinov — Software Engineer from Tashkent"/>
+      </div>
+    </div>
+    </div>
+    <div>
+      <div class="sec-tag fade" id="tag-about">About me</div>
+      <h2 class="sec-h fade" id="head-about">Who I am —<br><em>developer</em></h2>
+      <p class="ab-desc fade" id="about-desc">Hello! I am Abdulkodir Faxriddinov — a developer from Tashkent. I have been actively studying programming from an early age and already have solid experience in backend and fullstack development. My main focus is clean architecture, scalability, and bringing real value to products.</p>
+      <div class="info-list fade">
+        <div class="info-row"><div class="info-key" id="key-name">Name</div><div class="info-val">Abdulkodir Faxriddinov</div></div>
+        <div class="info-row"><div class="info-key" id="key-birth">Date of birth</div><div class="info-val" id="val-birth">April 22, 2011</div></div>
+        <div class="info-row"><div class="info-key" id="key-loc">Location</div><div class="info-val" id="val-loc">🇺🇿 Tashkent, Uzbekistan</div></div>
+        <div class="info-row"><div class="info-key" id="key-stack">Stack</div><div class="info-val">Node.js · NestJS · React · PostgreSQL · Python</div></div>
+        <div class="info-row">
+          <div class="info-key" id="key-lang">Languages</div>
+          <div class="info-val" id="val-lang">
+            <span class="lang-badge"><span class="lang-dot"></span>Uzbek — Native</span>
+            <span class="lang-badge"><span class="lang-dot" style="background:#9A9AA4"></span>Russian — Fluent</span>
+            <span class="lang-badge"><span class="lang-dot" style="background:rgba(201,169,110,.5)"></span>English — IT level</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-key" id="key-status">Status</div>
+          <div class="info-val">
+            <span class="status-live">
+              <span style="width:7px;height:7px;background:#4ade80;border-radius:50%;animation:blink 1.5s infinite;box-shadow:0 0 7px rgba(74,222,128,.5);display:inline-block;flex-shrink:0"></span>
+              <span id="status-txt">Available for projects</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="h-btns fade">
+        <a href="https://t.me/Uzgame_pc" target="_blank" class="btn-g"><span>✈ Telegram</span></a>
+        <a href="https://github.com/moy-kanal-17" target="_blank" class="btn-o"><span>GitHub →</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="bg-word">SKILLS</div>
+  <div class="sec-tag fade" id="tag-skills">Technologies</div>
+  <h2 class="sec-h fade" id="head-skills">My <em>skills</em></h2>
+  <div class="skills-g">
+    <div class="sk-card fade"><div class="sk-num">01</div><div class="sk-icon">🧠</div><h3 class="sk-title">Backend</h3><div class="sk-items">
+      <div class="sk-item">Node.js<div class="sk-bar-wrap"><div class="sk-bar" data-w="92"></div></div></div>
+      <div class="sk-item">NestJS<div class="sk-bar-wrap"><div class="sk-bar" data-w="88"></div></div></div>
+      <div class="sk-item">REST API<div class="sk-bar-wrap"><div class="sk-bar" data-w="90"></div></div></div>
+      <div class="sk-item">WebSocket / Socket.IO<div class="sk-bar-wrap"><div class="sk-bar" data-w="82"></div></div></div>
+      <div class="sk-item">JWT Auth / Guards<div class="sk-bar-wrap"><div class="sk-bar" data-w="85"></div></div></div>
+    </div></div>
+    <div class="sk-card fade"><div class="sk-num">02</div><div class="sk-icon">🗄️</div><h3 class="sk-title" id="sk-db">Databases</h3><div class="sk-items">
+      <div class="sk-item">PostgreSQL<div class="sk-bar-wrap"><div class="sk-bar" data-w="88"></div></div></div>
+      <div class="sk-item">MongoDB<div class="sk-bar-wrap"><div class="sk-bar" data-w="75"></div></div></div>
+      <div class="sk-item">MySQL<div class="sk-bar-wrap"><div class="sk-bar" data-w="72"></div></div></div>
+      <div class="sk-item">Sequelize ORM<div class="sk-bar-wrap"><div class="sk-bar" data-w="80"></div></div></div>
+    </div></div>
+    <div class="sk-card fade"><div class="sk-num">03</div><div class="sk-icon">⚡</div><h3 class="sk-title">Frontend</h3><div class="sk-items">
+      <div class="sk-item">React + Vite<div class="sk-bar-wrap"><div class="sk-bar" data-w="80"></div></div></div>
+      <div class="sk-item">TypeScript<div class="sk-bar-wrap"><div class="sk-bar" data-w="78"></div></div></div>
+      <div class="sk-item">Ant Design<div class="sk-bar-wrap"><div class="sk-bar" data-w="82"></div></div></div>
+      <div class="sk-item">Tailwind CSS<div class="sk-bar-wrap"><div class="sk-bar" data-w="85"></div></div></div>
+    </div></div>
+    <div class="sk-card fade"><div class="sk-num">04</div><div class="sk-icon">🤖</div><h3 class="sk-title">Telegram &amp; AI</h3><div class="sk-items">
+      <div class="sk-item">Telegraf + NestJS<div class="sk-bar-wrap"><div class="sk-bar" data-w="90"></div></div></div>
+      <div class="sk-item">Gemini / g4f<div class="sk-bar-wrap"><div class="sk-bar" data-w="75"></div></div></div>
+      <div class="sk-item" id="sk-ai-int">AI Integrations<div class="sk-bar-wrap"><div class="sk-bar" data-w="78"></div></div></div>
+      <div class="sk-item" id="sk-scenarios">Scenarios and buttons<div class="sk-bar-wrap"><div class="sk-bar" data-w="88"></div></div></div>
+    </div></div>
+    <div class="sk-card fade"><div class="sk-num">05</div><div class="sk-icon">🧩</div><h3 class="sk-title" id="sk-additional">More Skills</h3><div class="sk-items">
+      <div class="sk-item">RabbitMQ / CloudAMQP<div class="sk-bar-wrap"><div class="sk-bar" data-w="70"></div></div></div>
+      <div class="sk-item" id="sk-py-models">Python + AI models<div class="sk-bar-wrap"><div class="sk-bar" data-w="72"></div></div></div>
+      <div class="sk-item">UX/UI Design<div class="sk-bar-wrap"><div class="sk-bar" data-w="75"></div></div></div>
+      <div class="sk-item" id="sk-arch">Architecture from scratch<div class="sk-bar-wrap"><div class="sk-bar" data-w="85"></div></div></div>
+    </div></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="sec-tag fade" id="tag-projects">My works</div>
+  <h2 class="sec-h fade" id="head-projects">Projects</h2>
+  <div class="proj-g" id="projects-container">
+    <!-- Жёсткий HTML-скелет, который поисковики сожрут моментально, даже с выключенным JS -->
+    <div class="proj-c fade vis">
+      <div class="proj-num">PROJECT_01</div><div class="proj-icon">💬</div>
+      <h3 class="proj-title">Telegram Clone Chat</h3>
+      <div class="proj-desc">A full-fledged real-time messenger in the style of Telegram featuring groups, private chats, and JWT authorization.</div>
+      <div class="proj-tags"><span class="proj-tag">Socket.IO</span><span class="proj-tag">NestJS</span><span class="proj-tag">JWT</span><span class="proj-tag">React</span></div>
+      <button class="proj-more" onclick="toggleProj(this)">Learn more →</button>
+      <div class="proj-details"><ul class="proj-dl"><li>Realtime chat via Socket.IO</li><li>JWT authentication and protected rooms</li><li>Groups / private / public chats</li><li>UI fully styled like Telegram</li><li>Backend on NestJS with Modules + Guards</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="bg-word">CONTACT</div>
+  <div class="sec-tag fade" id="tag-contact">Get in touch</div>
+  <h2 class="sec-h fade" id="head-contact">Write <em>me</em></h2>
+  <div class="con-g">
+    <div>
+      <div class="ci fade"><div class="c-ico">✈️</div><div><div class="c-lbl">Telegram</div><a href="https://t.me/Uzgame_pc" target="_blank" class="c-val">@Uzgame_pc</a></div></div>
+      <div class="ci fade"><div class="c-ico">💾</div><div><div class="c-lbl">GitHub</div><a href="https://github.com/moy-kanal-17" target="_blank" class="c-val">github.com/moy-kanal-17</a></div></div>
+      <div class="ci fade"><div class="c-ico">📨</div><div><div class="c-lbl">Email</div><a href="mailto:17abduqodir17@gmail.com" class="c-val">17abduqodir17@gmail.com</a></div></div>
+      <div class="ci fade"><div class="c-ico">📍</div><div><div class="c-lbl" id="lbl-loc">Location</div><div class="c-val" id="val-loc-2">Tashkent, Uzbekistan 🇺🇿</div></div></div>
+    </div>
+    <div class="fade">
+      <div class="fi"><label class="fl" id="lbl-name">Your name</label><input type="text" class="finp" id="inp-name" placeholder="John Doe"/></div>
+      <div class="fi"><label class="fl">Telegram / Email</label><input type="text" class="finp" id="inp-contact" placeholder="@username or email"/></div>
+      <div class="fi"><label class="fl" id="lbl-subject">Subject</label>
+        <select class="fsel finp" id="sel-subject">
+          <!-- Опции обновляются через JS -->
+        </select>
+      </div>
+      <div class="fi"><label class="fl" id="lbl-msg">Message</label><textarea class="fta" id="txt-msg" placeholder="Describe your project or idea..."></textarea></div>
+      <button class="fsub" onclick="subForm()"><span id="btn-submit">Send →</span></button>
+      <div id="form-ok">✓ Opening Telegram...</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fl-logo"><em>AF.</em> Abdulkodir Faxriddinov</div>
+  <div class="fl-copy" id="footer-copy">© 2026 · Tashkent, UZ · Built with passion</div>
+  <div class="fl-soc">
+    <a href="https://t.me/Uzgame_pc" target="_blank" class="soc-a">✈</a>
+    <a href="https://github.com/moy-kanal-17" target="_blank" class="soc-a">⬡</a>
+    <a href="mailto:17abduqodir17@gmail.com" class="soc-a">✉</a>
+  </div>
+</footer>
+
+<script>
+const cur=document.getElementById('cur'),curl=document.getElementById('curl');
+let mx=0,my=0,fx=0,fy=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
+(function a(){fx+=(mx-fx)*.13;fy+=(my-fy)*.13;curl.style.left=fx+'px';curl.style.top=fy+'px';requestAnimationFrame(a)})();
+function addHov(s){document.querySelectorAll(s).forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.classList.add('h');curl.classList.add('h')});
+  el.addEventListener('mouseleave',()=>{cur.classList.remove('h');curl.classList.remove('h')});
+})}
+
+window.addEventListener('load',()=>{
+  setTimeout(()=>{
+    document.getElementById('loader').classList.add('gone');
+    document.querySelectorAll('[data-cnt]').forEach(cntAnim);
+  },2200);
+});
+
+const cv=document.getElementById('hcv'),ctx=cv.getContext('2d');
+function szCv(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight}
+szCv();window.addEventListener('resize',szCv);
+let pts=[];
+class Pt{
+  constructor(){this.rs()}
+  rs(){this.x=Math.random()*cv.width;this.y=Math.random()*cv.height;this.vx=(Math.random()-.5)*.4;this.vy=(Math.random()-.5)*.4;this.r=Math.random()*1.8+.4;this.op=Math.random()*.45+.1;this.life=0;this.ml=Math.random()*350+180}
+  up(){
+    this.x+=this.vx;this.y+=this.vy;this.life++;
+    const dx=this.x-mx,dy=this.y-my,d=Math.sqrt(dx*dx+dy*dy);
+    if(d<110){const f=((110-d)/110)*.35;this.vx+=dx/d*f;this.vy+=dy/d*f}
+    this.vx*=.996;this.vy*=.996;
+    if(this.life>this.ml)this.rs();
+  }
+  dr(){
+    const a=this.op*Math.sin(Math.PI*this.life/this.ml);
+    ctx.save();ctx.globalAlpha=a;ctx.fillStyle='#C9A96E';ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,6.28);ctx.fill();ctx.restore();
+  }
+}
+for(let i=0;i<100;i++)pts.push(new Pt());
+(function fr(){
+  ctx.clearRect(0,0,cv.width,cv.height);
+  for(let i=0;i<pts.length;i++){
+    for(let j=i+1;j<pts.length;j++){
+      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<130){ctx.save();ctx.globalAlpha=(1-d/130)*.08;ctx.strokeStyle='#C9A96E';ctx.lineWidth=.5;ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.stroke();ctx.restore()}
+    }
+  }
+  pts.forEach(p=>{p.up();p.dr()});
+  requestAnimationFrame(fr);
+})();
+
+const MQ=['Node.js','NestJS','React','PostgreSQL','Telegram Bots','AI Integration','Fullstack','Tashkent','TypeScript','Python','Socket.IO','REST API'];
+const dup=[...MQ,...MQ,...MQ];
+document.getElementById('mqt').innerHTML=dup.map(t=>`<div class="mq-i"><span class="mq-d"></span>${t}</div>`).join('');
+
+window.addEventListener('scroll',()=>{
+  const p=window.scrollY/(document.body.scrollHeight-innerHeight)*100;
+  document.getElementById('prog').style.width=p+'%';
+  document.getElementById('nav').classList.toggle('sc',scrollY>20);
+  document.querySelectorAll('section[id]').forEach(s=>{
+    if(window.scrollY>=s.offsetTop-180){
+      document.querySelectorAll('.nlinks a').forEach(a=>a.classList.remove('active'));
+      const la=document.querySelector('.nlinks a[href="#'+s.id+'"]');
+      if(la)la.classList.add('active');
+    }
+  });
+});
+
+function cntAnim(el){
+  const tgt=parseInt(el.getAttribute('data-cnt'));
+  let v=0;const step=tgt/50;
+  const tm=setInterval(()=>{v+=step;if(v>=tgt){v=tgt;clearInterval(tm)}el.textContent=Math.floor(v)+'+'},20);
+}
+
+function initSkillsObserver() {
+  const io2=new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.querySelectorAll('.sk-bar').forEach(b=>{setTimeout(()=>{b.style.width=b.dataset.w+'%'},120)});
+        io2.unobserve(e.target);
+      }
+    });
+  },{threshold:.15});
+  document.querySelectorAll('.skills-g .sk-card').forEach(c=>io2.observe(c));
+}
+
+function observe(){
+  const io=new IntersectionObserver((es)=>{
+    es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('vis'),i*80);io.unobserve(e.target)}});
+  },{threshold:.08});
+  document.querySelectorAll('.fade:not(.vis)').forEach(el=>io.observe(el));
+}
+
+function toggleProj(btn){
+  const c=btn.closest('.proj-c');
+  c.classList.toggle('open');
+  const currentLang = document.documentElement.lang || 'en';
+  if(c.classList.contains('open')) {
+    btn.textContent = currentLang === 'ru' ? 'Свернуть ↑' : (currentLang === 'uz' ? 'Yopish ↑' : 'Collapse ↑');
+  } else {
+    btn.textContent = currentLang === 'ru' ? 'Подробнее →' : (currentLang === 'uz' ? 'Batafsil →' : 'Learn more →');
+  }
+}
+
+function toggleM(){document.getElementById('nl').classList.toggle('op')}
+function closeMobile(){document.getElementById('nl').classList.remove('op')}
+
+const phrases=['Node.js Developer','NestJS Architect','Fullstack Engineer','Telegram Bot Dev','AI Integrator'];
+let pi=0,ci=0,del=false;
+const tel=document.getElementById('typed-text');
+function tw(){
+  if(!del){tel.textContent=phrases[pi].slice(0,ci+1);ci++;if(ci>=phrases[pi].length){del=true;setTimeout(tw,1800);return}}
+  else{tel.textContent=phrases[pi].slice(0,ci-1);ci--;if(ci<=0){del=false;pi=(pi+1)%phrases.length}}
+  setTimeout(tw,del?48:82);
+}
+
+function subForm(){
+  const nm=document.getElementById('inp-name')?.value.trim()||'';
+  const tg=document.getElementById('inp-contact')?.value.trim()||'';
+  const sub=document.getElementById('sel-subject')?.value||'';
+  const msg=document.getElementById('txt-msg')?.value.trim()||'';
+  
+  const currentLang = document.documentElement.lang || 'en';
+  let prefixName = 'Name', prefixContact = 'Contact', prefixSubject = 'Subject', prefixMsg = 'Message';
+  if(currentLang === 'ru') { prefixName = 'Имя'; prefixContact = 'Контакт'; prefixSubject = 'Тема'; prefixMsg = 'Сообщение'; }
+  else if(currentLang === 'uz') { prefixName = 'Ism'; prefixContact = 'Kontakt'; prefixSubject = 'Mavzu'; prefixMsg = 'Xabar'; }
+
+  const txt=encodeURIComponent('Hello!\n' + prefixName + ': '+nm+'\n' + prefixContact + ': '+tg+'\n' + prefixSubject + ': '+sub+'\n' + prefixMsg + ': '+msg);
+  window.open('https://t.me/Uzgame_pc?text='+txt,'_blank');
+  document.getElementById('form-ok').style.display='block';
+}
+
+const langData = {
+  en: {
+    lnkAbout: "About", lnkSkills: "Skills", lnkProjects: "Projects", lnkContact: "Contact",
+    navStatus: "Available for projects",
+    heroDesc: "Backend and fullstack developer based in Tashkent. Specializing in scalable web applications, Telegram bots, and AI integrations using Node.js and NestJS.",
+    btnViewProj: "View projects", btnContact: "Contact",
+    statProj: "Major projects", statStacks: "Languages / stacks", statAge: "Years Old · Tashkent",
+    aboutBirthYr: "Birth year", tagAbout: "About me", headAbout: "Who I am —<br><em>developer</em>",
+    aboutDesc: "Hello! I am Abdulkodir Faxriddinov — a developer from Tashkent. I have been actively studying programming from an early age and already have solid experience in backend and fullstack development. My main focus is clean architecture, scalability, and bringing real value to products.",
+    keyName: "Name", keyBirth: "Date of birth", valBirth: "April 22, 2011", keyLoc: "Location", valLoc: "🇺🇿 Tashkent, Uzbekistan",
+    keyStack: "Stack", keyLang: "Languages", keyStatus: "Status", valStatus: "Available for projects",
+    valLangHTML: `<span class="lang-badge"><span class="lang-dot"></span>Uzbek — Native</span>
+                  <span class="lang-badge"><span class="lang-dot" style="background:#9A9AA4"></span>Russian — Fluent</span>
+                  <span class="lang-badge"><span class="lang-dot" style="background:rgba(201,169,110,.5)"></span>English — IT level</span>`,
+    tagSkills: "Technologies", headSkills: "My <em>skills</em>",
+    skDb: "Databases", skAiInt: "AI Integrations", skScenarios: "Scenarios and buttons", skAdditional: "More Skills", skPyModels: "Python + AI models", skArch: "Architecture from scratch",
+    tagProjects: "My works", headProjects: "Projects",
+    btnMore: "Learn more →",
+    tagContact: "Get in touch", headContact: "Write <em>me</em>", lblLoc: "Location", valLoc2: "Tashkent, Uzbekistan 🇺🇿",
+    lblName: "Your name", phName: "John Doe", phContact: "@username or email", lblSubject: "Subject",
+    lblMsg: "Message", phMsg: "Describe your project or idea...", btnSubmit: "Send →", formOk: "✓ Opening Telegram...",
+    footerCopy: "© 2026 · Tashkent, UZ · Built with passion",
+    subjects: ["Select topic", "Backend development", "Fullstack project", "Telegram bot", "AI integration", "Other"],
+    projects: [
+      { num: "PROJECT_01", ico: "💬", title: "Telegram Clone Chat", desc: "A full-fledged real-time messenger in the style of Telegram featuring groups, private chats, and JWT authorization.", tags: ["Socket.IO", "NestJS", "JWT", "React"], bullets: ["Realtime chat via Socket.IO", "JWT authentication and protected rooms", "Groups / private / public chats", "UI fully styled like Telegram", "Backend on NestJS with Modules + Guards"] },
+      { num: "PROJECT_02", ico: "🎥", title: "Kutube", desc: "A video hosting platform with content upload, search, and video playback features. Fully custom NestJS backend.", tags: ["NestJS", "PostgreSQL", "Vanilla JS", "REST API"], bullets: ["Video upload and storage processing", "Content search and dynamic filtering", "Robust backend built on NestJS + PostgreSQL", "Lightweight frontend on pure JavaScript"] },
+      { num: "PROJECT_03", ico: "🛒", title: "Online Market", desc: "A complete marketplace infrastructure handling user roles, structured CRUD operations, and an intuitive UI.", tags: ["React", "NestJS", "PostgreSQL", "Sequelize"], bullets: ["Full CRUD for products and order dispatch", "Distinct access levels: admin, seller, buyer", "React frontend connected to NestJS backend", "PostgreSQL database management via Sequelize ORM"] },
+      { num: "PROJECT_04", ico: "🤖", title: "AI Assistant (Jarvis)", desc: "A smart voice assistant with speech recognition, system automation triggers, and a clean desktop GUI.", tags: ["Python", "Speech Recognition", "AI / LLM", "Tkinter"], bullets: ["Voice control enabled by Speech Recognition APIs", "Seamless LLM integration with Gemini and g4f", "Responsive GUI desktop interface built with Python", "System-level command execution and automation scripts"] }
+    ]
+  },
+  ru: {
+    lnkAbout: "О себе", lnkSkills: "Навыки", lnkProjects: "Проекты", lnkContact: "Контакт",
+    navStatus: "Открыт к проектам",
+    heroDesc: "Backend и fullstack разработчик из Ташкента. Специализируюсь на масштабируемых веб-приложениях, Telegram-ботах и AI-интеграциях на Node.js и NestJS.",
+    btnViewProj: "Смотреть проекты", btnContact: "Связаться",
+    statProj: "Крупных проекта", statStacks: "Языков / стеков", statAge: "Лет · Tashkent",
+    aboutBirthYr: "Год рождения", tagAbout: "Обо мне", headAbout: "Кто я —<br><em>разработчик</em>",
+    aboutDesc: "Привет! Я Abdulkodir Faxriddinov — разработчик из Ташкента. С раннего возраста активно изучаю программирование и уже имею серьёзный опыт в backend и fullstack разработке. Мой фокус — чистая архитектура, масштабируемость и практическая польза продуктов.",
+    keyName: "Имя", keyBirth: "Дата рожд.", valBirth: "22 апреля 2011", keyLoc: "Локация", valLoc: "🇺🇿 Tashkent, Узбекистан",
+    keyStack: "Стек", keyLang: "Языки", keyStatus: "Статус", valStatus: "Открыт к проектам",
+    valLangHTML: `<span class="lang-badge"><span class="lang-dot"></span>Узбекский — родной</span>
+                  <span class="lang-badge"><span class="lang-dot" style="background:#9A9AA4"></span>Русский — свободно</span>
+                  <span class="lang-badge"><span class="lang-dot" style="background:rgba(201,169,110,.5)"></span>English — IT level</span>`,
+    tagSkills: "Технологии", headSkills: "Мои <em>навыки</em>",
+    skDb: "Базы данных", skAiInt: "AI Интеграции", skScenarios: "Сценарии и кнопки", skAdditional: "Дополнительно", skPyModels: "Python + AI модели", skArch: "Архитектура с нуля",
+    tagProjects: "Мои работы", headProjects: "Проекты",
+    btnMore: "Подробнее →",
+    tagContact: "Связь", headContact: "Написать <em>мне</em>", lblLoc: "Локация", valLoc2: "Tashkent, Узбекистан 🇺🇿",
+    lblName: "Ваше имя", phName: "Иван Иванов", phContact: "@username или email", lblSubject: "Тема",
+    lblMsg: "Сообщение", phMsg: "Опишите ваш проект или идею...", btnSubmit: "Отправить →", formOk: "✓ Открываю Telegram...",
+    footerCopy: "© 2026 · Tashkent, UZ · Создано с душой",
+    subjects: ["Выбрать", "Backend разработка", "Fullstack проект", "Telegram бот", "AI интеграция", "Другое"],
+    projects: [
+      { num: "PROJECT_01", ico: "💬", title: "Telegram Clone Chat", desc: "Полноценный real-time мессенджер в стиле Telegram с группами, приватными чатами и JWT авторизацией.", tags: ["Socket.IO", "NestJS", "JWT", "React"], bullets: ["Realtime чат через Socket.IO", "JWT авторизация и защищённые комнаты", "Группы / приватные / публичные чаты", "UI полностью в стиле Telegram", "Backend на NestJS, Modules + Guards"] },
+      { num: "PROJECT_02", ico: "🎥", title: "Kutube", desc: "Видеоплатформа с загрузкой, поиском и отображением контента. Собственный backend на NestJS.", tags: ["NestJS", "PostgreSQL", "Vanilla JS", "REST API"], bullets: ["Загрузка и хранение видео", "Поиск и фильтрация контента", "Backend на NestJS + PostgreSQL", "Frontend на чистом JavaScript"] },
+      { num: "PROJECT_03", ico: "🛒", title: "Online Market", desc: "Полноценный маркетплейс с ролями пользователей, CRUD операциями и удобным интерфейсом.", tags: ["React", "NestJS", "PostgreSQL", "Sequelize"], bullets: ["Полный CRUD для товаров и заказов", "Роли: admin, seller, buyer", "React frontend + NestJS backend", "PostgreSQL + Sequelize ORM"] },
+      { num: "PROJECT_04", ico: "🤖", title: "AI Assistant (Jarvis)", desc: "Голосовой AI-ассистент с распознаванием речи, GUI интерфейсом и системными командами.", tags: ["Python", "Speech Recognition", "AI / LLM", "Tkinter"], bullets: ["Голосовое управление через Speech Recognition", "Интеграция с Gemini, g4f", "GUI интерфейс на Python", "Системные команды и автоматизация"] }
+    ]
+  },
+  uz: {
+    lnkAbout: "Men haqimda", lnkSkills: "Ko'nikmalar", lnkProjects: "Loyihalar", lnkContact: "Aloqa",
+    navStatus: "Loyihalar uchun ochiqman",
+    heroDesc: "Toshkentlik Backend va Fullstack dasturchi. Node.js va NestJS ekotizimida kengayuvchan veb-ilovalar, Telegram botlar va AI integratsiyalarini yaratishga ixtisoslashganman.",
+    btnViewProj: "Loyihalarni ko'rish", btnContact: "Bog'lanish",
+    statProj: "Yirik loyihalar", statStacks: "Tillar / steklar", statAge: "Yoshda · Toshkent",
+    aboutBirthYr: "Tug'ilgan yil", tagAbout: "Men haqimda", headAbout: "Men kimman —<br><em>dasturchi</em>",
+    aboutDesc: "Salom! Men Abdulkodir Faxriddinov — Toshkentlik dasturchiman. Yoshligimdan dasturlashni faol o'rganib kelmoqdaman va backend hamda fullstack yo'nalishlarida jiddiy tajribaga egaman. Asosiy e'tiborim — toza arxitektura, kengayuvchanlik va mahsulotning amaliy foydasidir.",
+    keyName: "Ism", keyBirth: "Tug'ilgan sana", valBirth: "22-aprel 2011-yil", keyLoc: "Manzil", valLoc: "🇺🇿 Toshkent, O'zbekiston",
+    keyStack: "Stek", keyLang: "Tillar", keyStatus: "Status", valStatus: "Loyihalar uchun ochiqman",
+    valLangHTML: `<span class="lang-badge"><span class="lang-dot"></span>O'zbek tili — Ona tili</span>
+                  <span class="lang-badge"><span class="lang-dot" style="background:#9A9AA4"></span>Rus tili — Erkin</span>
+                  <span class="lang-badge"><span class="lang-dot" style="background:rgba(201,169,110,.5)"></span>Ingliz tili — IT darajasi</span>`,
+    tagSkills: "Texnologiyalar", headSkills: "Mening <em>ko'nikmalarim</em>",
+    skDb: "Ma'lumotlar bazasi", skAiInt: "AI Integratsiyalari", skScenarios: "Ssenariylar va tugmalar", skAdditional: "Qo'shimcha", skPyModels: "Python + AI modellar", skArch: "Noldan arxitektura",
+    tagProjects: "Mening ishlarim", headProjects: "Loyihalar",
+    btnMore: "Batafsil →",
+    tagContact: "Aloqa", headContact: "Xabar <em>yo'llash</em>", lblLoc: "Manzil", valLoc2: "Toshkent, O'zbekiston 🇺🇿",
+    lblName: "Ismingiz", phName: "Eshmat Toshmatov", phContact: "@username yoki email", lblSubject: "Mavzu",
+    lblMsg: "Xabar", phMsg: "Loyihangiz yoki g'oyangizni tavsiflang...", btnSubmit: "Yuborish →", formOk: "✓ Telegram ochilmoqda...",
+    footerCopy: "© 2026 · Toshkent, UZ · Mehr bilan yaratilgan",
+    subjects: ["Tanlash", "Backend dasturlash", "Fullstack loyiha", "Telegram bot", "AI integratsiya", "Boshqa"],
+    projects: [
+      { num: "PROJECT_01", ico: "💬", title: "Telegram Clone Chat", desc: "Guruhlar, shaxsiy chatlar va JWT avtorizatsiyasiga ega Telegram uslubidagi to'liq real-time messenjer.", tags: ["Socket.IO", "NestJS", "JWT", "React"], bullets: ["Socket.IO orqali real-time chat", "JWT avtorizatsiya va himoyalangan xonalar", "Guruhlar / shaxsiy / ommaviy chatlar", "To'liq Telegram uslubidagi UI", "NestJS backend, Modullar + Gvardlar"] },
+      { num: "PROJECT_02", ico: "🎥", title: "Kutube", desc: "Videolarni yuklash, qidirish va ko'rish imkoniyatiga ega video platforma. NestJS da yozilgan shaxsiy backend.", tags: ["NestJS", "PostgreSQL", "Vanilla JS", "REST API"], bullets: ["Videolarni yuklash va saqlash", "Kontentni qidirish va filtrlash", "NestJS + PostgreSQL da backend", "Toza JavaScriptda frontend qismi"] },
+      { num: "PROJECT_03", ico: "🛒", title: "Online Market", desc: "Foydalanuvchi rollari, CRUD operatsiyalari va qulay interfeysga ega mukammal marketpleys loyihasi.", tags: ["React", "NestJS", "PostgreSQL", "Sequelize"], bullets: ["Mahsulotlar va buyurtmalar uchun to'liq CRUD", "Rollar: admin, sotuvchi, xaridor", "React frontend + NestJS backend bog'liqligi", "PostgreSQL + Sequelize ORM texnologiyalari"] },
+      { num: "PROJECT_04", ico: "🤖", title: "AI Assistant (Jarvis)", desc: "Nutqni aniqlash, GUI interfeysi va tizimli buyruqlarni bajaruvchi ovozli sun'iy intellekt yordamchisi.", tags: ["Python", "Speech Recognition", "AI / LLM", "Tkinter"], bullets: ["Speech Recognition orqali ovozli boshqaruv", "Gemini va g4f modellari integratsiyasi", "Python tilida yaratilgan GUI interfeysi", "Tizimli buyruqlar va jarayonlarni avtomatlashtirish"] }
+    ]
+  }
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  const d = langData[lang];
+  
+  document.getElementById('lnk-about').textContent = d.lnkAbout;
+  document.getElementById('lnk-skills').textContent = d.lnkSkills;
+  document.getElementById('lnk-projects').textContent = d.lnkProjects;
+  document.getElementById('lnk-contact').textContent = d.lnkContact;
+  document.getElementById('nav-status-txt').textContent = d.navStatus;
+  
+  document.getElementById('hero-desc').textContent = d.heroDesc;
+  document.getElementById('btn-view-proj').textContent = d.btnViewProj;
+  document.getElementById('btn-contact').textContent = d.btnContact;
+  document.getElementById('stat-projects').textContent = d.statProj;
+  document.getElementById('stat-stacks').textContent = d.statStacks;
+  document.getElementById('stat-age').textContent = d.statAge;
+  
+  document.getElementById('about-birth-yr').textContent = d.aboutBirthYr;
+  document.getElementById('tag-about').textContent = d.tagAbout;
+  document.getElementById('head-about').innerHTML = d.headAbout;
+  document.getElementById('about-desc').textContent = d.aboutDesc;
+  document.getElementById('key-name').textContent = d.keyName;
+  document.getElementById('key-birth').textContent = d.keyBirth;
+  document.getElementById('val-birth').textContent = d.valBirth;
+  document.getElementById('key-loc').textContent = d.keyLoc;
+  document.getElementById('val-loc').textContent = d.valLoc;
+  document.getElementById('key-stack').textContent = d.keyStack;
+  document.getElementById('key-lang').textContent = d.keyLang;
+  document.getElementById('val-lang').innerHTML = d.valLangHTML;
+  document.getElementById('key-status').textContent = d.keyStatus;
+  document.getElementById('status-txt').textContent = d.valStatus;
+  
+  document.getElementById('tag-skills').textContent = d.tagSkills;
+  document.getElementById('head-skills').innerHTML = d.headSkills;
+  document.getElementById('sk-db').textContent = d.skDb;
+  document.getElementById('sk-ai-int').childNodes[0].textContent = d.skAiInt;
+  document.getElementById('sk-scenarios').childNodes[0].textContent = d.skScenarios;
+  document.getElementById('sk-additional').textContent = d.skAdditional;
+  document.getElementById('sk-py-models').childNodes[0].textContent = d.skPyModels;
+  document.getElementById('sk-arch').childNodes[0].textContent = d.skArch;
+  
+  document.getElementById('tag-projects').textContent = d.tagProjects;
+  document.getElementById('head-projects').textContent = d.headProjects;
+  
+  document.getElementById('tag-contact').textContent = d.tagContact;
+  document.getElementById('head-contact').innerHTML = d.headContact;
+  document.getElementById('lbl-loc').textContent = d.lblLoc;
+  document.getElementById('val-loc-2').textContent = d.valLoc2;
+  document.getElementById('lbl-name').textContent = d.lblName;
+  document.getElementById('inp-name').placeholder = d.phName;
+  document.getElementById('inp-contact').placeholder = d.phContact;
+  document.getElementById('lbl-subject').textContent = d.lblSubject;
+  document.getElementById('lbl-msg').textContent = d.lblMsg;
+  document.getElementById('txt-msg').placeholder = d.phMsg;
+  document.getElementById('btn-submit').textContent = d.btnSubmit;
+  document.getElementById('form-ok').textContent = d.formOk;
+  
+  document.getElementById('footer-copy').textContent = d.footerCopy;
+  
+  const sel = document.getElementById('sel-subject');
+  sel.innerHTML = '';
+  d.subjects.forEach((s, idx) => {
+    const opt = document.createElement('option');
+    opt.value = idx === 0 ? "" : s;
+    opt.textContent = s;
+    sel.appendChild(opt);
+  });
+  
+  const pContainer = document.getElementById('projects-container');
+  pContainer.innerHTML = '';
+  d.projects.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'proj-c fade vis'; 
+    card.innerHTML = `
+      <div class="proj-num">${p.num}</div><div class="proj-icon">${p.ico}</div>
+      <h3 class="proj-title">${p.title}</h3>
+      <div class="proj-desc">${p.desc}</div>
+      <div class="proj-tags">${p.tags.map(t => `<span class="proj-tag">${t}</span>`).join('')}</div>
+      <button class="proj-more" onclick="toggleProj(this)">${d.btnMore}</button>
+      <div class="proj-details"><ul class="proj-dl">
+        ${p.bullets.map(b => `<li>${b}</li>`).join('')}
+      </ul></div>
+    `;
+    pContainer.appendChild(card);
+  });
+  
+  addHov('a,button,.sk-card,.proj-c,.soc-a,.ci,.burger,.info-row');
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  });
+}
+
+document.addEventListener('DOMContentLoaded',() => {
+  observe();
+  setTimeout(tw,2600);
+  setLang('en');
+  initSkillsObserver();
+});
+</script>
+</body>
+</html>
 .ld-logo{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:700;color:var(--white);letter-spacing:-.03em;opacity:0;animation:ldIn .8s .3s forwards}
 .ld-logo em{color:var(--gold);font-style:italic}
 .ld-bar{width:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:ldBar 1.4s .5s ease forwards}
