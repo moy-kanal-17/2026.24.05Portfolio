@@ -1165,7 +1165,6 @@ function setLang(lang) {
    INIT
 ═══════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
-  // Restore saved language or detect from browser
   const saved = localStorage.getItem('af_lang');
   const urlLang = new URLSearchParams(window.location.search).get('lang');
   const browserLang = navigator.language?.slice(0,2);
